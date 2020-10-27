@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/design_default_color_primary">
+
+<!--  style form input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:text="@string/form_input"
+            android:textStyle="bold">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+<!-- NIM -->
+        <EditText
+            android:id="@+id/enim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nim"
+            android:inputType="textCapCharacters"
+            android:importantForAutofill="no">
+        </EditText>
+
+<!-- Nama -->
+        <EditText
+            android:id="@+id/enama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nama"
+            android:inputType="textCapCharacters"
+            android:importantForAutofill="no">
+        </EditText>
+
+<!-- Jurusan -->
+        <EditText
+            android:id="@+id/ejurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/jurusan"
+            android:inputType="textCapCharacters"
+            android:importantForAutofill="no">
+        </EditText>
+
+<!-- Semester -->
+        <EditText
+            android:id="@+id/esemester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/semester"
+            android:inputType="textCapCharacters"
+            android:importantForAutofill="no">
+        </EditText>
+
+        <Button
+            android:id="@+id/btnsimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/simpan">
+        </Button>
+        
+        
+    </LinearLayout>
+
+
+</LinearLayout>

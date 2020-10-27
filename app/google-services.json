@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "19626988948",
+    "firebase_url": "https://belajarcrudfirebase-70c31.firebaseio.com",
+    "project_id": "belajarcrudfirebase-70c31",
+    "storage_bucket": "belajarcrudfirebase-70c31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19626988948:android:38d6e0295cee2ffb9d2b81",
+        "android_client_info": {
+          "package_name": "com.a.ridho_crud_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19626988948-lu5uidocjtpped6iok928lh2lqpltdht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a.ridho_crud_firebase",
+            "certificate_hash": "23b1c4f580a534a7bbaeead4514d8459884e30cd"
+          }
+        },
+        {
+          "client_id": "19626988948-r5viejdt837srl7rnk2h9gohlegvl2ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTLiWR8bbOCvCLCJfWF3h1Ouwzs9Iy9Mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19626988948-r5viejdt837srl7rnk2h9gohlegvl2ek.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
