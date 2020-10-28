@@ -18,12 +18,13 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 
-public class InputForm {
+public class InputForm extends DialogFragment {
     String nim, nama, jurusan, semester;
     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-    public InputForm(String nim, String nama, String jurusan, String semester) {
+    public InputForm(String nama, String nim, String jurusan, String semester) {
         this.nim = nim;
         this.nama = nama;
         this.jurusan = jurusan;
@@ -44,7 +45,6 @@ public class InputForm {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-//        boolean attachToRoot;
         final View view = inflater.inflate(R.layout.form_input,container, false);
 
         enim = view.findViewById(R.id.enim);
@@ -52,29 +52,24 @@ public class InputForm {
         ejurusan = view.findViewById(R.id.ejurusan);
         esemester = view.findViewById(R.id.esemester);
 
-//        enim.setVisibility( );
-//        set 8:03
-
         enim.setText(nim);
         enama.setText(nama);
         ejurusan.setText(jurusan);
         esemester.setText(semester);
 
         btnsimpan.setOnClickListener(new View.OnClickListener() {
-//            private Object EditText;
-
             @Override
-            public void onClick(View v) {
-                String nama = enama.getText().toString();
+            public void onClick(View view) {
                 String nim = enim.getText().toString();
+                String nama = enama.getText().toString();
                 String jurusan = ejurusan.getText().toString();
                 String semester = esemester.getText().toString();
 
                 if(TextUtils.isEmpty(nim)) {
-                    input((EditText) enim, "nim");
+                    input((EditText) enim, "Nim");
 
                 } else if(TextUtils.isEmpty(nama)) {
-                    input((EditText) enama, "nama");
+                    input((EditText) enama, "Nama");
 
                 } else if(TextUtils.isEmpty(jurusan)) {
                     input((EditText) ejurusan, "Jurusan");
@@ -102,12 +97,17 @@ public class InputForm {
 
 //    menit 24:42
 
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         Dialog dialog = getDialog();
         if(dialog != null) {
             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         }
+    }
+
+    private void input(EditText txt, String s) {
+        txt.setError(s+"Harus Di Isi");
+        txt.requestFocus();
     }
 
 //    private Dialog getDialog() {
@@ -117,10 +117,7 @@ public class InputForm {
 //    private Dialog getDialog() {
 //    }
 
-    private void input(EditText txt, String s) {
-        txt.setError(s+"Harus Di Isi");
-        txt.requestFocus();
-    }
+
 
 
 //    public Dialog getDialog() {
